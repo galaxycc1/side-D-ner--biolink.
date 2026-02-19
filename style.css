@@ -1,0 +1,93 @@
+/* عام */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* الغلاف */
+.cover {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* شعار دائري */
+.logo-container {
+  position: relative;
+  top: -60px; /* رفع اللوجو فوق الغلاف */
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: #fff;
+}
+
+/* العنوان */
+header h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: -40px;
+}
+
+header p {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* أزرار */
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00bfff; /* أزرق سماوي */
+  color: white;
+  padding: 12px 20px;
+  width: 250px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.btn:hover {
+  background-color: #009acd;
+}
+
+/* كلمة مائية */
+footer {
+  margin-top: 40px;
+}
+
+footer .watermark {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.9em;
+  text-align: center;
+  padding: 10px;
+  user-select: none;
+}
