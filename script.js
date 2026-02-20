@@ -1,10 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".btn");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const url = btn.href;
-      window.open(url, "_blank"); // يفتح الرابط في نافذة جديدة
-    });
-  });
+// script.js
+
+// تبديل بين دارك مود و لايت مود
+const darkModeToggle = document.getElementById("darkModeToggle");
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 });
