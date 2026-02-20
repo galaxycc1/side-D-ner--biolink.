@@ -4,51 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Side Döner</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Side Döner in Leipzig - Paunsdorfer Allee 1. Online bestellen und unsere Social Media besuchen.">
+  <meta name="keywords" content="Side Döner, Leipzig, Paunsdorfer Allee, Online bestellen, Döner, Fast Food">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Side Döner Leipzig">
+  <meta property="og:description" content="Besuche Side Döner in Leipzig oder bestelle online.">
+  <meta property="og:image" content="cover.webp">
+  <meta property="og:url" content="https://galaxycc1.github.io/side-D-ner--biolink/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Side Döner Leipzig">
+  <meta name="twitter:description" content="Besuche Side Döner in Leipzig oder bestelle online.">
+  <meta name="twitter:image" content="cover.webp">
+
+  <!-- Favicon (متوافق مع GitHub Pages) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body>
+
+<body class="light-mode">
   <header>
     <div class="cover">
-      <img src="https://i.supaimg.com/bd135460-b2e2-4648-8a8b-0f1e80344561/524367ac-6bb0-4beb-9b3b-c0aeacf871d5.webp" alt="Cover Image" class="cover-img">
+      <!-- استخدم الصورة المحلية -->
+      <img src="cover.webp" alt="Cover Image" class="cover-img" loading="lazy">
     </div>
+
     <div class="logo-container">
-      <img src="https://i.supaimg.com/bd135460-b2e2-4648-8a8b-0f1e80344561/85b70999-ae7f-4e50-886d-ee6ec33c3129.png" alt="Side Döner Logo" class="logo">
+      <!-- استخدم اللوغو المحلي -->
+      <img src="logo.webp" alt="Side Döner Logo" class="logo">
     </div>
+
     <h1>Side Döner</h1>
     <p>Paunsdorfer Allee 1, 04329 Leipzig</p>
   </header>
 
   <main>
     <div class="buttons-container">
-      <!-- رفع زري الموقع على الخريطة والتقييم فوق الفيسبوك -->
-      <a href="https://maps.app.goo.gl/DHLvFq7YiS4EtyeZ7" target="_blank" class="btn">
+      <a href="https://maps.app.goo.gl/DHLvFq7YiS4EtyeZ7" target="_blank" class="btn map-btn">
         <i class="fas fa-map-marker-alt"></i> Unser Standort
       </a>
-      <a href="https://maps.app.goo.gl/DHLvFq7YiS4EtyeZ7" target="_blank" class="btn">
+
+      <a href="https://maps.app.goo.gl/DHLvFq7YiS4EtyeZ7" target="_blank" class="btn rate-btn">
         <i class="fas fa-star"></i> Bewerten Sie uns
       </a>
 
-      <!-- الأزرار الاجتماعية -->
       <a href="https://www.facebook.com/share/1HgufB2S3v/" target="_blank" class="btn">
         <i class="fab fa-facebook-f"></i> Facebook
       </a>
+
       <a href="https://www.instagram.com/sideleipzig_p.c?igsh=MWxqa2t5Y3JzZWVmZQ==" target="_blank" class="btn">
         <i class="fab fa-instagram"></i> Instagram
       </a>
+
       <a href="https://www.tiktok.com/@side_doner?lang=jv-ID&is_from_webapp=1&sender_device=mobile&sender_web_id=7590598014764844566" target="_blank" class="btn">
         <i class="fab fa-tiktok"></i> TikTok
       </a>
+
       <a href="https://sidedoener-leipzig.de/" target="_blank" class="btn">
         <i class="fas fa-globe"></i> Offizielle Website
       </a>
+
       <a href="https://wolt.com/de/deu/leipzig/restaurant/side-doener-paunsdorf-center?utm_source=googlemapreserved&utm_campaign=side-doener-paunsdorf-center&utm_content=67ed4bc7faf402ff25420ca7&rwg_token=AFd1xnEETDb0uyNtDJosGkUBKJNknikSBYdAeB9ZEK_5QdWiJLdmJO-JNchEkq3OYdHLYlMvv9ARPVaHLiUFQqak_5O1smhRzrKfJRg4z-q4Q9YLtUHhdCI%3D" target="_blank" class="btn">
         <i class="fas fa-utensils"></i> Online bestellen
       </a>
     </div>
+
+    <div class="dark-mode-toggle-container">
+      <button id="darkModeToggle" class="btn">
+        <i class="fas fa-adjust"></i> Dark Mode
+      </button>
+    </div>
   </main>
 
-  <!-- كلمة مائية أسفل الصفحة -->
   <footer>
     <p class="watermark">@Side Döner 2026</p>
   </footer>
