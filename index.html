@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Side Döner P.C. - Authentic Turkish Döner in Leipzig Paunsdorf. Best Döner in town!">
+    <meta name="keywords" content="Döner, Leipzig, Side Döner, Turkish Food, Paunsdorf">
+    <meta name="author" content="Side Döner P.C.">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png">
+    
+    <title>Side Döner P.C. | Leipzig Paunsdorf</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <i class="fas fa-cookie-bite"></i>
+                <p>Diese Website verwendet Cookies und externe Dienste (Google Maps, Social Media) zur Verbesserung Ihrer Erfahrung. Durch die Nutzung stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn accept">Akzeptieren</button>
+                <button id="cookie-decline" class="cookie-btn decline">Ablehnen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="cover">
+            <img src="cover.webp" alt="Side Döner Cover Image" class="cover-img">
+        </div>
+        <div class="logo-container">
+            <img src="logo.webp" alt="Side Döner Logo" class="logo">
+        </div>
+        <h1>Side Döner P.C.</h1>
+        <p class="address">
+            <i class="fas fa-location-dot"></i> Paunsdorfer Allee, 04329 Leipzig
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="buttons-container">
+            <!-- Location & Rating -->
+            <a href="https://maps.app.goo.gl/DHLvFq7YiS4EtyeZ7" target="_blank" rel="noopener noreferrer" class="btn btn-location">
+                <i class="fas fa-map-location-dot"></i>
+                <span>Unser Standort</span>
+            </a>
+            <a href="https://maps.app.goo.gl/DHLvFq7YiS4EtyeZ7" target="_blank" rel="noopener noreferrer" class="btn btn-rating">
+                <i class="fas fa-star"></i>
+                <span>Jetzt Bewerten</span>
+            </a>
+
+            <!-- Social Media -->
+            <a href="https://www.facebook.com/share/1HgufB2S3v/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/sideleipzig_p.c" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@side_doner" target="_blank" rel="noopener noreferrer" class="btn btn-tiktok">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+
+            <!-- Website & Order -->
+            <a href="https://sidedoener-leipzig.de/" target="_blank" rel="noopener noreferrer" class="btn btn-website">
+                <i class="fas fa-globe"></i>
+                <span>Offizielle Website</span>
+            </a>
+            <a href="https://wolt.com/de/deu/leipzig/restaurant/side-doener-paunsdorf-center" target="_blank" rel="noopener noreferrer" class="btn btn-order">
+                <i class="fas fa-utensils"></i>
+                <span>Online Bestellen</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <p class="owner-info">
+                <strong>Side Döner P.C.</strong><br>
+                Inhaber: Mahsum Gülec<br>
+                Paunsdorfer Allee, 04329 Leipzig
+            </p>
+        </div>
+        
+        <nav class="legal-nav">
+            <a href="impressum.html">Impressum</a>
+            <span class="separator">|</span>
+            <a href="datenschutz.html">Datenschutzerklärung</a>
+        </nav>
+        
+        <p class="watermark">© 2026 Side Döner P.C. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- Cookie Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cookieBanner = document.getElementById('cookie-banner');
+            var acceptBtn = document.getElementById('cookie-accept');
+            var declineBtn = document.getElementById('cookie-decline');
+            
+            // Check if user already made a choice
+            if (localStorage.getItem('cookieConsent')) {
+                cookieBanner.style.display = 'none';
+            }
+            
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieBanner.style.opacity = '0';
+                setTimeout(function() {
+                    cookieBanner.style.display = 'none';
+                }, 300);
+            });
+            
+            declineBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'declined');
+                cookieBanner.style.opacity = '0';
+                setTimeout(function() {
+                    cookieBanner.style.display = 'none';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+/* ===============================================
+   ROOT VARIABLES
+   =============================================== */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-card: #242424;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #707070;
+    --accent-primary: #e63946;
+    --accent-secondary: #ff6b35;
+    --accent-gradient: linear-gradient(135deg, #e63946, #ff6b35);
+    --btn-facebook: #1877f2;
+    --btn-instagram: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    --btn-tiktok: #000000;
+    --btn-order: #00d26a;
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ===============================================
+   RESET & BASE
+   =============================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===============================================
+   COOKIE BANNER
+   =============================================== */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border-top: 2px solid var(--accent-primary);
+    padding: 15px 20px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.cookie-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cookie-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.cookie-text i {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+.cookie-text p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.cookie-text a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cookie-btn.accept {
+    background: var(--accent-gradient);
+    color: white;
+}
+
+.cookie-btn.accept:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.cookie-btn.decline {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--text-muted);
+}
+
+.cookie-btn.decline:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+/* ===============================================
+   HEADER
+   =============================================== */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.cover {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, var(--bg-primary), transparent);
+}
+
+.logo-container {
+    position: relative;
+    margin-top: -60px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    background-color: var(--bg-secondary);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+header .address {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+header .address i {
+    color: var(--accent-primary);
+}
+
+/* ===============================================
+   MAIN & BUTTONS
+   =============================================== */
+main {
+    flex: 1;
+    padding: 0 20px 30px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn i {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+/* Button Variants */
+.btn-location {
+    background: var(--accent-gradient);
+}
+
+.btn-rating {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+}
+
+.btn-facebook {
+    background: var(--btn-facebook);
+}
+
+.btn-instagram {
+    background: var(--btn-instagram);
+}
+
+.btn-tiktok {
+    background: var(--btn-tiktok);
+    border: 1px solid #333;
+}
+
+.btn-website {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.btn-order {
+    background: var(--btn-order);
+}
+
+/* ===============================================
+   FOOTER
+   =============================================== */
+footer {
+    background: var(--bg-secondary);
+    padding: 30px 20px;
+    margin-top: auto;
+    border-top: 1px solid #333;
+}
+
+.footer-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.owner-info {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.owner-info strong {
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.legal-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.legal-nav a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    padding: 5px 10px;
+}
+
+.legal-nav a:hover {
+    color: var(--accent-primary);
+}
+
+.legal-nav .separator {
+    color: var(--text-muted);
+}
+
+.watermark {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    user-select: none;
+}
+
+/* ===============================================
+   RESPONSIVE
+   =============================================== */
+@media screen and (max-width: 600px) {
+    .cover {
+        height: 180px;
+    }
+    
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookie-text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .cookie-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .cover {
+        height: 280px;
+    }
+    
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===============================================
+   LEGAL PAGES STYLES
+   =============================================== */
+.legal-page {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-page h1 {
+    color: var(--accent-primary);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--bg-card);
+    padding-bottom: 15px;
+}
+
+.legal-page h2 {
+    color: var(--text-primary);
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.legal-page p,
+.legal-page li {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.legal-page ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.legal-page a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: var(--accent-gradient);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
